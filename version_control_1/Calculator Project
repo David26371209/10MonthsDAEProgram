@@ -1,0 +1,55 @@
+# Simple Calculator
+
+print("Welcome to my simple calculator")
+
+
+print("What is your name?")
+user_name = input()
+print("Nice to meet you,", user_name)
+
+
+print("You can use these operators: +  -  *  /")
+
+
+keep_going = "yes"
+
+while keep_going == "yes":
+
+    print("Enter the first number:")
+    number1 = float(input())
+
+    print("Enter the operator (+, -, *, /):")
+    operator = input()
+
+    print("Enter the second number:")
+    number2 = float(input())
+
+    print()
+    print("Calculating...")
+
+    if operator == "+":
+        answer = number1 + number2
+        print(number1, "+", number2, "=", answer)
+
+    elif operator == "-":
+        answer = number1 - number2
+        print(number1, "-", number2, "=", answer)
+
+    elif operator == "*":
+        answer = number1 * number2
+        print(number1, "*", number2, "=", answer)
+
+    elif operator == "/":
+        answer = number1 / number2
+        print(number1, "/", number2, "=", answer)
+
+    else:
+        print("That operator is not correct. Please use + - * or /")
+
+    
+    print("Do you want to calculate again? (yes or no)")
+    keep_going = input()
+    
+
+print("Thank you for using the calculator,", user_name)
+print("Goodbye!")
