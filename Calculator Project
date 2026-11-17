@@ -12,6 +12,8 @@ print("You can use these operators: +  -  *  /")
 
 
 keep_going = "yes"
+calculation_count = 0
+calculation_history = []
 
 while keep_going == "yes":
 
@@ -46,10 +48,17 @@ while keep_going == "yes":
     else:
         print("That operator is not correct. Please use + - * or /")
 
-    
+    calculation_history.append((number1, operator, number2, answer))
+    calculation_count += 1
+
     print("Do you want to calculate again? (yes or no)")
     keep_going = input()
-    
+
+    print('calculation_count:', calculation_count)
+    for result in calculation_history:
+        print(result)
+
+    print ("Total calculations done:", calculation_count)
 
 print("Thank you for using the calculator,", user_name)
 print("Goodbye!")
